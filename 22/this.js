@@ -34,8 +34,8 @@
 // const anotherPerson = {
 //     name : 'KIM'
 // };
-// /** 
-//  * getName 메서드를 호출한 것은 anotherPerson이기 때문에, 
+// /**
+//  * getName 메서드를 호출한 것은 anotherPerson이기 때문에,
 //  * anotherPerson의 name에 바인딩된 "KIM"이 출력된다.
 //  * */
 // anotherPerson.getName = person.getName;
@@ -75,7 +75,7 @@
 //  * getThisBinding 함수를 호출하면서 인수로 전달한 객체(thisArg)를 getThisBinding 함수의 this에 바인딩했다.
 //  * apply 메서드는 호출할 함수(getThisBinding)의 인수를 배열로 묶어 전달한다.
 //  */
-// console.log(getThisBinding.apply(thisArg, [1,2,3])) 
+// console.log(getThisBinding.apply(thisArg, [1,2,3]))
 // // Arg: [Arguments] { '0': 1, '1': 2, '2': 3 }
 // // { a: 1 }
 
@@ -92,20 +92,20 @@
 //     const arr = Array.prototype.slice.call(arguments);
 
 //     console.log(arr) // [ 1, 2, 3 ]
-    
+
 //     return arr;
 // };
 
 // convertArgsToArray(1,2,3)
 
 const person = {
-    name : "Lay",
-    foo(cb) {
-        // (1)
-        setTimeout(cb.bind(this), 100);
-    }
+  name: "Lay",
+  foo(cb) {
+    // (1)
+    setTimeout(cb.bind(this), 100);
+  },
 };
 
-person.foo( function(){
-    console.log(`Hi my name is ${this.name}`) // (2) Hi my name is Lay
-})
+person.foo(function () {
+  console.log(`Hi my name is ${this.name}`); // (2) Hi my name is Lay
+});
