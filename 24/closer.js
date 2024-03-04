@@ -41,7 +41,7 @@
 // };
 
 // const innerFunc = outer();
-// // innerFunc();
+// innerFunc();
 
 // let num = 0;
 
@@ -61,6 +61,10 @@
 
 //     return ++num;
 // };
+
+// console.log(increase());
+// console.log(increase());
+// console.log(increase());
 
 // const increase = (function () {
     
@@ -151,24 +155,28 @@
 // console.log(me.name); // Kim
 // console.log(me._age); // undefined
 
-const Person = (function () {
+// const Person = (function () {
 
-    let _age = 0; // private
+//     let _age = 0; // private
 
-    function Person(name, age) {
+//     function Person(name, age) {
     
-        this.name = name; // public
-        _age = age; // private
-    };
+//         this.name = name; // public
+//         _age = age; // private
+//     };
 
-    Person.prototype.sayHi = function () {
-        console.log(`Hi My name is ${this.name}. i am ${_age}`);
-    };
+//     Person.prototype.sayHi = function () {
+//         console.log(`Hi My name is ${this.name}. i am ${_age}`);
+//     };
 
 
-    return Person;
-}());
-const me = new Person('Kim', '28');
-me.sayHi(); // Hi My name is Kim. i am 28
-console.log(me.name); // Kim
-console.log(me._age); // undefined
+//     return Person;
+// }());
+// const me = new Person('Kim', '28');
+// me.sayHi(); // Hi My name is Kim. i am 28
+// console.log(me.name); // Kim
+// console.log(me._age); // undefined;
+
+// console.log(hello);
+
+// let hello;
